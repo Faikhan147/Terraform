@@ -1,7 +1,7 @@
 # main.tf (real-time companies style)
 
 module "eks" {
-  source = "../../modules/eks"
+  source = "../../module/eks"
 
   env = var.env
 
