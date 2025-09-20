@@ -7,7 +7,7 @@ module "eks" {
 
   # Cluster
   cluster_name     = var.cluster_name
-  cluster_role_arn = var.eks_cluster_role_arn  # pass ARN
+  role_arn = var.eks_cluster_role_arn  # pass ARN
 
   # Node group
   node_group_name       = var.node_group_name
@@ -17,7 +17,7 @@ module "eks" {
   min_size              = var.min_size
   max_size              = var.max_size
   user_data             = var.user_data
-  nodes_role_arn        = var.eks_nodes_ssm_role_arn   # pass ARN
+  node_role_arn        = var.eks_nodes_ssm_role_arn   # pass ARN
 
   # Networking
   subnet_ids         = var.subnet_ids
