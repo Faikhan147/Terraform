@@ -7,7 +7,7 @@ resource "aws_eks_cluster" "this" {
   name = var.cluster_name
 
   # Directly using the name from variables (assume existing IAM role)
-  role_arn = var.cluster_role_arn
+  role_arn = var.eks_cluster_role_arn
 
   vpc_config {
     subnet_ids         = var.subnet_ids
@@ -57,7 +57,7 @@ resource "aws_eks_node_group" "this" {
   cluster_name    = aws_eks_cluster.this.name
   node_group_name = var.node_group_name
   subnet_ids      = var.subnet_ids
-  node_role_arn   = var.nodes_role_arn  # existing IAM role name from var
+  node_role_arn   = var.eks_nodes_ssm_role_arn  # existing IAM role name from var
 
   launch_template {
     id      = aws_launch_template.eks_node_lt.id
