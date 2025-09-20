@@ -24,5 +24,5 @@ subnet_ids          = ["subnet-0e025feb128873499", "subnet-0b7421ffc019f493b"]
 security_group_ids  = ["sg-0cc0ceb088e483152"]
 
 # IAM Role Names
-eks_cluster_role_name = "prod-eks-cluster-role"
-eks_nodes_ssm_role_name = "prod-eks-node-role"
+eks_cluster_role_arn = "arn:aws:iam::923884399206:role/prod-eks-cluster-role"
+eks_nodes_ssm_role_arn = "arn:aws:iam::923884399206:role/prod-eks-node-role"
