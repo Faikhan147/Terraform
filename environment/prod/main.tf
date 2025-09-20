@@ -17,7 +17,7 @@ module "eks" {
   min_size              = var.min_size
   max_size              = var.max_size
   user_data             = var.user_data
-  node_role_name        = var.eks_nodes_ssm_role_name   # pass name
+  nodes_role_name        = var.eks_nodes_ssm_role_name   # pass name
 
   # Networking
   subnet_ids         = var.subnet_ids
