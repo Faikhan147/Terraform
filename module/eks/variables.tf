@@ -66,12 +66,12 @@ variable "security_group_ids" {
 }
 
 # IAM Role Names
-variable "eks_cluster_role_name" {
+variable "cluster_role_name" {
   description = "Existing IAM role name for EKS cluster"
   type        = string
 }
 
-variable "eks_nodes_ssm_role_name" {
+variable "nodes_role_name" {
   description = "Existing IAM role name for EKS worker nodes"
   type        = string
 }
