@@ -17,5 +17,5 @@ variable "subnet_ids" {
 variable "security_group_ids" {
   type = list(string)
 }
-variable "eks_cluster_role_name" {}
-variable "eks_nodes_ssm_role_name" {}
+variable "eks_cluster_role_arn" {}
+variable "eks_nodes_ssm_role_arn" {}
